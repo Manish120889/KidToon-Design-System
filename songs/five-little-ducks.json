@@ -1,0 +1,32 @@
+{
+  "id": "five-little-ducks",
+  "title": "Five Little Ducks",
+  "category": "Animals",
+  "palette": "day",
+  "mascot": "bunny",
+  "bpm": 115,
+  "tags": ["nursery rhyme", "five little ducks", "counting", "animals", "kids songs", "sing along", "KidToon"],
+  "description": "Sing along to Five Little Ducks! Counting song for toddlers. Ad-free nursery rhymes \u2014 KidToon",
+  "verses": [
+    {
+      "lyrics": ["Five",   "little",  "ducks",   "went",   "out",   "one",   "day,"],
+      "notes":  ["G4",     "G4",      "A4",      "G4",     "G4",     "E4",   "D4"],
+      "beats":  [1, 0.5, 1, 0.5, 0.5, 0.5, 1.5]
+    },
+    {
+      "lyrics": ["over",   "the",   "hills",   "and",   "far",   "away."],
+      "notes":  ["C4",     "D4",    "E4",      "F4",    "G4",    "C4"],
+      "beats":  [1, 0.5, 1, 0.5, 1, 2]
+    },
+    {
+      "lyrics": ["Mama",  "duck",   "said,",  "quack",  "quack",  "quack",  "quack,"],
+      "notes":  ["G4",  "G4",  "G4",  "G4",  "G4",  "G4",  "G4"],
+      "beats":  [1, 1, 1, 0.5, 0.5, 0.5, 1]
+    },
+    {
+      "lyrics": ["but",   "only",   "four",   "little",   "ducks",   "came",   "back."],
+      "notes":  ["F4",  "F4",  "E4",  "E4",  "D4",  "D4",  "C4"],
+      "beats":  [0.5, 1, 1, 0.5, 1, 0.5, 2]
+    }
+  ]
+}

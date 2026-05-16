@@ -1,0 +1,120 @@
+# Make.com flow blueprint (alternative to GitHub Actions)
+#
+# This is a high-level routing description for a Make.com (Integromat) scenario
+# that runs the same pipeline as `scripts/daily-v2.js` but visually.
+#
+# Import path: Make.com only imports JSON blueprints exported from a real
+# scenario, so this YAML is a HUMAN-READABLE spec your operator should
+# follow when wiring it up. Each module's "module name" is the exact one
+# in Make.com's library.
+
+scenario:
+  name: KidToon Daily Pipeline v2
+  schedule:
+    type: cron
+    expression: "0 6 * * *"
+
+steps:
+  - name: 1. Scrape trends
+    module: HTTP — Make a request
+    config:
+      url: https://news.google.com/rss/headlines/section/topic/HEADLINES?hl=en-US&gl=US&ceid=US:en
+      parse_response: yes
+      type: xml
+    output: trending_items
+
+  - name: 2. Filter unsafe topics
+    module: Filter
+    rule: |
+      NOT contains_any(headline,
+        ["death","killed","shooting","disaster","arrested","virus","scandal"])
+
+  - name: 3. Pick top safe topic
+    module: Tools — Set variable
+    expression: array_first(trending_items)
+
+  - name: 4. Generate lyrics + style + captions
+    module: Anthropic — Messages
+    config:
+      model: claude-sonnet-4-5
+      system: <<copy systemPromptKidtoon() from scripts/llm-lyrics.js>>
+      user: <<copy userPromptKidtoon(topic) — substitute topic vars>>
+      response_format: json
+    output: lyrics
+
+  - name: 5. Generate audio via Suno
+    module: HTTP — Make a request
+    config:
+      url: "{{SUNO_API_BASE}}/api/generate"
+      method: POST
+      body:
+        prompt: "{{lyrics.lyrics}}"
+        tags: "{{lyrics.suno_prompt}}"
+        title: "{{lyrics.title}}"
+        wait_audio: false
+    output: clip_ids
+
+  - name: 6. Wait for Suno to finish (Repeater + Sleep + HTTP poll)
+    module: Repeater + HTTP
+    config:
+      url: "{{SUNO_API_BASE}}/api/feed?ids={{clip_ids}}"
+      until: status == complete
+      poll_seconds: 30
+      max_minutes: 10
+
+  - name: 7. Download mp3
+    module: HTTP — Get a file
+    config:
+      url: "{{best_clip.audio_url}}"
+    output: audio_blob
+
+  - name: 8. Render video via Shotstack
+    module: HTTP — Make a request
+    config:
+      url: https://api.shotstack.io/v1/render
+      method: POST
+      headers:
+        x-api-key: "{{SHOTSTACK_API_KEY}}"
+      body:
+        # See Shotstack template builder for the visual composition.
+        # Provide audio_blob + lyrics word-timing array + background video.
+
+  - name: 9. Wait + download MP4
+    module: Repeater + HTTP — same pattern as Suno
+
+  - name: 10. (Optional) Approval gate
+    module: Tools — Webhook (custom)
+    config:
+      # Post to Slack with Approve / Reject buttons.
+      # Resume the scenario only when approval webhook fires.
+
+  - name: 11. Upload to YouTube
+    module: YouTube — Upload a video
+    config:
+      privacy: public
+      title: "{{lyrics.youtube.title}}"
+      description: "{{lyrics.youtube.description}}"
+      tags: "{{lyrics.youtube.tags}}"
+      made_for_kids: true
+
+  - name: 12. Upload to Instagram Reels
+    module: Instagram for Business — Create a media (Reels)
+
+  - name: 13. Post to X
+    module: X (Twitter) — Create a post
+    config:
+      media: video
+      text: "{{lyrics.x.caption}}"
+
+  - name: 14. Log to spreadsheet / Notion / Airtable
+    module: Google Sheets — Add a row OR Notion — Create a page
+
+fail_safes:
+  - on_error:
+      retries: 2
+      backoff: exponential
+  - on_suno_timeout:
+      action: fall_back_to_backup_topic
+      backup_index: 1  # second topic from step 3
+  - on_safety_failure:
+      action: discard_and_alert_slack

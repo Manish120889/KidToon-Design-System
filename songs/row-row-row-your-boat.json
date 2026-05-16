@@ -1,0 +1,32 @@
+{
+  "id": "row-row-row-your-boat",
+  "title": "Row, Row, Row Your Boat",
+  "category": "Sunshine Songs",
+  "palette": "day",
+  "mascot": "sun",
+  "bpm": 110,
+  "tags": ["nursery rhyme", "row row row your boat", "kids songs", "sing along", "KidToon"],
+  "description": "Sing along to Row, Row, Row Your Boat! Ad-free nursery rhymes for toddlers. \u2014 KidToon",
+  "verses": [
+    {
+      "lyrics": ["Row,",  "row,",  "row",  "your",  "boat,"],
+      "notes":  ["C4",   "C4",    "C4",   "D4",     "E4"],
+      "beats":  [1.5, 1.5, 1, 0.5, 1.5]
+    },
+    {
+      "lyrics": ["gently",  "down",  "the",  "stream."],
+      "notes":  ["E4",  "D4",  "E4",  "F4"],
+      "beats":  [1, 1, 1, 1, 3]
+    },
+    {
+      "lyrics": ["Merrily,",  "merrily,",  "merrily,",  "merrily,"],
+      "notes":  ["C5",  "C5",  "G4",  "G4"],
+      "beats":  [1, 1, 1, 1]
+    },
+    {
+      "lyrics": ["life",  "is",  "but",  "a",  "dream!"],
+      "notes":  ["E4",   "E4",  "D4",   "D4",  "C4"],
+      "beats":  [1, 1, 1, 0.5, 2]
+    }
+  ]
+}

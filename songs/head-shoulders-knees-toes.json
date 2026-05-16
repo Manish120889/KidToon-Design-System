@@ -1,0 +1,47 @@
+{
+  "id": "head-shoulders-knees-toes",
+  "title": "Head, Shoulders, Knees and Toes",
+  "category": "Sunshine Songs",
+  "palette": "pink",
+  "mascot": "balloon",
+  "bpm": 130,
+  "tags": ["nursery rhyme", "head shoulders knees toes", "kids songs", "movement", "sing along", "KidToon"],
+  "description": "Sing and move along to Head, Shoulders, Knees and Toes! Ad-free nursery rhymes for toddlers. \u2014 KidToon",
+  "verses": [
+    {
+      "lyrics": ["Head,",  "shoulders,",  "knees",   "and",   "toes,"],
+      "notes":  ["C4",  "C4",   "C4",  "C4",  "C4"],
+      "beats":  [1, 1, 1, 0.5, 1]
+    },
+    {
+      "lyrics": ["knees",  "and",  "toes!"],
+      "notes":  ["G4",  "G4",  "C5"],
+      "beats":  [1, 0.5, 1.5]
+    },
+    {
+      "lyrics": ["Head,",  "shoulders,",  "knees",   "and",   "toes,"],
+      "notes":  ["C4",  "C4",   "C4",  "C4",  "C4"],
+      "beats":  [1, 1, 1, 0.5, 1]
+    },
+    {
+      "lyrics": ["knees",  "and",  "toes!"],
+      "notes":  ["G4",  "G4",  "C5"],
+      "beats":  [1, 0.5, 1.5]
+    },
+    {
+      "lyrics": ["And",   "eyes",  "and",  "ears"],
+      "notes":  ["E4",   "F4",  "G4",  "A4"],
+      "beats":  [0.5, 1, 0.5, 1]
+    },
+    {
+      "lyrics": ["and",   "mouth",   "and",   "nose,"],
+      "notes":  ["G4",  "F4",  "E4",  "D4"],
+      "beats":  [0.5, 1, 0.5, 1]
+    },
+    {
+      "lyrics": ["head,",  "shoulders,",  "knees",   "and",   "toes!"],
+      "notes":  ["C4",  "C4",   "C4",  "C4",  "C4"],
+      "beats":  [1, 1, 1, 0.5, 2]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "id": "baa-baa-black-sheep",
+  "title": "Baa Baa Black Sheep",
+  "category": "Animals",
+  "palette": "cream",
+  "mascot": "bunny",
+  "bpm": 100,
+  "tags": ["nursery rhyme", "baa baa black sheep", "animals", "kids songs", "sing along", "KidToon"],
+  "description": "Sing along to Baa Baa Black Sheep! Ad-free nursery rhymes for toddlers. \u2014 KidToon",
+  "verses": [
+    {
+      "lyrics": ["Baa,",  "baa,",  "black",  "sheep,"],
+      "notes":  ["C4",   "C4",    "G4",     "G4"],
+      "beats":  [1, 1, 1, 1]
+    },
+    {
+      "lyrics": ["have",  "you",   "any",   "wool?"],
+      "notes":  ["A4",   "A4",    "G4",     "G4"],
+      "beats":  [1, 1, 1, 2]
+    },
+    {
+      "lyrics": ["Yes",   "sir,",  "yes",   "sir,"],
+      "notes":  ["F4",   "F4",     "E4",    "E4"],
+      "beats":  [1, 1, 1, 1]
+    },
+    {
+      "lyrics": ["three",  "bags",  "full."],
+      "notes":  ["D4",   "D4",     "C4"],
+      "beats":  [1, 1, 2]
+    },
+    {
+      "lyrics": ["One",   "for",   "my",   "master,"],
+      "notes":  ["F4",   "F4",    "E4",    "E4"],
+      "beats":  [1, 0.5, 0.5, 1.5]
+    },
+    {
+      "lyrics": ["one",   "for",   "my",   "dame,"],
+      "notes":  ["D4",   "D4",     "C4",   "C4"],
+      "beats":  [1, 0.5, 0.5, 1.5]
+    }
+  ]
+}

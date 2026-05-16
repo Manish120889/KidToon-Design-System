@@ -1,0 +1,32 @@
+{
+  "id": "mary-had-a-little-lamb",
+  "title": "Mary Had a Little Lamb",
+  "category": "Animals",
+  "palette": "grass",
+  "mascot": "bunny",
+  "bpm": 110,
+  "tags": ["nursery rhyme", "mary had a little lamb", "kids songs", "animals", "sing along", "KidToon"],
+  "description": "Sing along to Mary Had a Little Lamb! Ad-free nursery rhymes for toddlers. \u2014 KidToon",
+  "verses": [
+    {
+      "lyrics": ["Mary",  "had",  "a",   "little",  "lamb,"],
+      "notes":  ["E4",   "D4",    "C4",  "D4",      "E4"],
+      "beats":  [1, 1, 1, 1, 1]
+    },
+    {
+      "lyrics": ["little",  "lamb,",  "little",  "lamb."],
+      "notes":  ["E4",  "E4",  "E4",  "E4"],
+      "beats":  [1, 1, 1, 1]
+    },
+    {
+      "lyrics": ["Mary",  "had",  "a",   "little",  "lamb,"],
+      "notes":  ["E4",   "D4",    "C4",  "D4",      "E4"],
+      "beats":  [1, 1, 1, 1, 1]
+    },
+    {
+      "lyrics": ["its",   "fleece",  "was",   "white",  "as",  "snow."],
+      "notes":  ["D4",   "D4",       "E4",    "D4",     "C4",  "C4"],
+      "beats":  [1, 1, 1, 1, 1, 2]
+    }
+  ]
+}

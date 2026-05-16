@@ -1,0 +1,42 @@
+{
+  "id": "twinkle-twinkle",
+  "title": "Twinkle, Twinkle, Little Star",
+  "category": "Bedtime",
+  "palette": "night",
+  "mascot": "star",
+  "bpm": 100,
+  "tags": ["nursery rhyme", "bedtime", "lullaby", "stars", "kids songs", "sing along", "KidToon"],
+  "description": "Sing along to Twinkle, Twinkle, Little Star with Sunny the Star! Ad-free nursery rhymes for toddlers. \u2014 KidToon",
+  "verses": [
+    {
+      "lyrics": ["Twinkle,",   "twinkle,",  "little",  "star,"],
+      "notes":  ["C4",          "C4",         "G4",      "G4"],
+      "beats":  [1, 1, 1, 1]
+    },
+    {
+      "lyrics": ["How",  "I",   "wonder",   "what",   "you",   "are."],
+      "notes":  ["A4",   "A4",  "G4",       "F4",    "F4",    "E4"],
+      "beats":  [1, 1, 1, 1, 0.5, 1.5]
+    },
+    {
+      "lyrics": ["Up",  "above",  "the",  "world",  "so",   "high,"],
+      "notes":  ["E4",   "E4",     "D4",  "D4",     "C4",    "C4"],
+      "beats":  [1, 1, 1, 1, 1, 1]
+    },
+    {
+      "lyrics": ["Like",  "a",  "diamond",  "in",   "the",  "sky."],
+      "notes":  ["G4",   "G4",  "F4",        "F4",  "E4",  "D4"],
+      "beats":  [1, 1, 1, 1, 1, 1]
+    },
+    {
+      "lyrics": ["Twinkle,",  "twinkle,",  "little",  "star,"],
+      "notes":  ["C4", "C4", "G4", "G4"],
+      "beats":  [1, 1, 1, 1]
+    },
+    {
+      "lyrics": ["How",  "I",   "wonder",   "what",   "you",   "are."],
+      "notes":  ["A4",   "A4",  "G4",       "F4",    "F4",    "E4"],
+      "beats":  [1, 1, 1, 1, 0.5, 1.5]
+    }
+  ]
+}

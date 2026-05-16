@@ -1,0 +1,42 @@
+{
+  "id": "abc-song",
+  "title": "The ABC Song",
+  "category": "ABC & 123",
+  "palette": "pink",
+  "mascot": "star",
+  "bpm": 110,
+  "tags": ["nursery rhyme", "abc song", "alphabet", "learning", "kids songs", "sing along", "KidToon"],
+  "description": "Sing the ABC Song! Learn the alphabet with KidToon. Ad-free nursery rhymes for toddlers. \u2014 KidToon",
+  "verses": [
+    {
+      "lyrics": ["A",  "B",  "C",  "D",  "E",  "F",  "G,"],
+      "notes":  ["C4", "C4", "G4", "G4", "A4", "A4", "G4"],
+      "beats":  [1, 1, 1, 1, 1, 1, 2]
+    },
+    {
+      "lyrics": ["H",  "I",  "J",  "K,",  "L",  "M",   "N",  "O",  "P,"],
+      "notes":  ["F4", "F4", "E4", "E4",   "D4", "D4", "D4", "D4", "C4"],
+      "beats":  [1, 1, 1, 1, 0.5, 0.5, 0.5, 0.5, 2]
+    },
+    {
+      "lyrics": ["Q",  "R",  "S,",  "T",  "U",  "V,"],
+      "notes":  ["G4", "G4", "F4",  "E4", "E4", "D4"],
+      "beats":  [1, 1, 1, 1, 1, 1]
+    },
+    {
+      "lyrics": ["W",  "X,",  "Y",  "and",  "Z!"],
+      "notes":  ["G4", "G4",   "F4",  "E4",  "D4"],
+      "beats":  [1, 1, 1, 0.5, 1.5]
+    },
+    {
+      "lyrics": ["Now",  "I",   "know",  "my",  "ABCs,"],
+      "notes":  ["C4",   "C4",   "G4",   "G4",  "A4"],
+      "beats":  [1, 1, 1, 1, 2]
+    },
+    {
+      "lyrics": ["next",  "time",  "won't",  "you",  "sing",  "with",  "me!"],
+      "notes":  ["A4",  "G4",  "F4",  "F4",  "E4",  "D4",  "C4"],
+      "beats":  [1, 1, 1, 0.5, 1, 0.5, 2]
+    }
+  ]
+}

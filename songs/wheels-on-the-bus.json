@@ -1,0 +1,42 @@
+{
+  "id": "wheels-on-the-bus",
+  "title": "The Wheels on the Bus",
+  "category": "Sunshine Songs",
+  "palette": "day",
+  "mascot": "sun",
+  "bpm": 120,
+  "tags": ["nursery rhyme", "wheels on the bus", "kids songs", "sing along", "transportation", "KidToon"],
+  "description": "Sing along to The Wheels on the Bus! Ad-free nursery rhymes for toddlers. \u2014 KidToon",
+  "verses": [
+    {
+      "lyrics": ["The",  "wheels",  "on",  "the",  "bus"],
+      "notes":  ["C4",   "F4",     "F4",  "F4",    "F4"],
+      "beats":  [0.5, 1, 0.5, 0.5, 1]
+    },
+    {
+      "lyrics": ["go",  "round",  "and",  "round,"],
+      "notes":  ["F4",  "A4",    "A4",   "A4"],
+      "beats":  [0.5, 1, 0.5, 1.5]
+    },
+    {
+      "lyrics": ["round",  "and",  "round,",  "round",  "and",  "round."],
+      "notes":  ["G4",  "G4",   "C5",  "C5",  "G4",   "F4"],
+      "beats":  [1, 0.5, 1, 1, 0.5, 1.5]
+    },
+    {
+      "lyrics": ["The",  "wheels",  "on",  "the",  "bus"],
+      "notes":  ["C4",   "F4",     "F4",  "F4",    "F4"],
+      "beats":  [0.5, 1, 0.5, 0.5, 1]
+    },
+    {
+      "lyrics": ["go",  "round",  "and",  "round,"],
+      "notes":  ["F4",  "A4",    "A4",   "A4"],
+      "beats":  [0.5, 1, 0.5, 1.5]
+    },
+    {
+      "lyrics": ["all",  "through",  "the",  "town!"],
+      "notes":  ["B4",   "A4",    "G4",   "F4"],
+      "beats":  [1, 1, 1, 2]
+    }
+  ]
+}

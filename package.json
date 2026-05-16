@@ -1,0 +1,44 @@
+{
+  "name": "kidtoon-pipeline",
+  "version": "2.0.0",
+  "description": "Daily AI-music-video pipeline. Trends → LLM lyrics → Suno → Remotion → YouTube/X/Instagram.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "preview": "remotion studio remotion/Root.tsx",
+    "render": "node scripts/render.js",
+    "daily": "node scripts/daily.js",
+    "daily:v2": "node scripts/daily-v2.js",
+    "daily:news": "node scripts/daily-v2.js --mode=news",
+    "daily:kidtoon": "node scripts/daily-v2.js --mode=kidtoon",
+    "daily:dryrun": "node scripts/daily-v2.js --dry-run",
+    "get-token": "node scripts/get-refresh-token.js",
+    "trends": "node scripts/scrape-trends.js",
+    "trends:kid": "node scripts/scrape-trends.js --kidtoon",
+    "lyrics": "node scripts/llm-lyrics.js",
+    "suno": "node scripts/suno-generate.js",
+    "shorts": "node scripts/compose-shorts.js",
+    "approve": "node scripts/approve.js",
+    "pending": "node scripts/approve.js --list"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.200",
+    "@remotion/bundler": "4.0.200",
+    "@remotion/renderer": "4.0.200",
+    "remotion": "4.0.200",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "googleapis": "^144.0.0",
+    "open": "^10.1.0",
+    "dotenv": "^16.4.5",
+    "fast-xml-parser": "^4.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/react": "^18.3.3",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

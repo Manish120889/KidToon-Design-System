@@ -1,0 +1,52 @@
+{
+  "id": "itsy-bitsy-spider",
+  "title": "The Itsy Bitsy Spider",
+  "category": "Animals",
+  "palette": "day",
+  "mascot": "bunny",
+  "bpm": 110,
+  "tags": ["nursery rhyme", "itsy bitsy spider", "kids songs", "sing along", "animals", "KidToon"],
+  "description": "Sing along to The Itsy Bitsy Spider! Ad-free nursery rhymes for toddlers. \u2014 KidToon",
+  "verses": [
+    {
+      "lyrics": ["The",  "itsy",  "bitsy",  "spider"],
+      "notes":  ["G4",   "G4",     "A4",     "G4"],
+      "beats":  [0.5, 1, 1, 1]
+    },
+    {
+      "lyrics": ["went",  "up",  "the",  "water",  "spout."],
+      "notes":  ["F4",   "G4",  "F4",    "E4",     "C4"],
+      "beats":  [1, 1, 0.5, 1, 1.5]
+    },
+    {
+      "lyrics": ["Down",  "came",  "the",  "rain"],
+      "notes":  ["C4",   "D4",     "E4",   "F4"],
+      "beats":  [1, 1, 1, 1]
+    },
+    {
+      "lyrics": ["and",   "washed",  "the",  "spider",  "out."],
+      "notes":  ["G4",   "A4",       "G4",   "E4",      "C4"],
+      "beats":  [1, 1, 0.5, 1.5, 1.5]
+    },
+    {
+      "lyrics": ["Out",  "came",  "the",  "sun"],
+      "notes":  ["E4",   "F4",    "G4",   "A4"],
+      "beats":  [1, 1, 1, 1]
+    },
+    {
+      "lyrics": ["and",  "dried",  "up",  "all",  "the",  "rain."],
+      "notes":  ["G4",  "F4",      "E4",  "F4",   "E4",   "D4"],
+      "beats":  [0.5, 1, 1, 1, 0.5, 1.5]
+    },
+    {
+      "lyrics": ["And",  "the",  "itsy",  "bitsy",  "spider"],
+      "notes":  ["C4",   "D4",   "E4",     "F4",     "G4"],
+      "beats":  [0.5, 0.5, 1, 1, 1]
+    },
+    {
+      "lyrics": ["went",  "up",  "the",  "spout",  "again."],
+      "notes":  ["A4",   "G4",  "F4",    "E4",     "C4"],
+      "beats":  [1, 1, 0.5, 1, 2]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "old-macdonald",
+  "title": "Old MacDonald Had a Farm",
+  "category": "Animals",
+  "palette": "grass",
+  "mascot": "bunny",
+  "bpm": 120,
+  "tags": ["nursery rhyme", "old macdonald", "farm animals", "kids songs", "sing along", "KidToon"],
+  "description": "Sing along to Old MacDonald Had a Farm with all the farm animals! Ad-free nursery rhymes for toddlers. \u2014 KidToon",
+  "verses": [
+    {
+      "lyrics": ["Old",   "Mac-",  "Don-",  "ald",  "had",  "a",   "farm,"],
+      "notes":  ["C4",    "C4",    "C4",    "G3",   "A3",   "A3",  "G3"],
+      "beats":  [1, 1, 1, 1, 1, 1, 2]
+    },
+    {
+      "lyrics": ["E",     "I",     "E",    "I",    "O!"],
+      "notes":  ["E4",    "E4",    "D4",   "D4",   "C4"],
+      "beats":  [1, 1, 1, 1, 2]
+    },
+    {
+      "lyrics": ["And",  "on",   "his",  "farm",  "he",   "had",  "a",  "cow,"],
+      "notes":  ["C4",   "C4",   "C4",   "G3",    "A3",   "A3",   "G3", "G3"],
+      "beats":  [0.5, 0.5, 0.5, 1, 1, 1, 0.5, 1.5]
+    },
+    {
+      "lyrics": ["E",     "I",     "E",    "I",    "O!"],
+      "notes":  ["E4",    "E4",    "D4",   "D4",   "C4"],
+      "beats":  [1, 1, 1, 1, 2]
+    },
+    {
+      "lyrics": ["With",  "a",  "moo",  "moo",  "here,"],
+      "notes":  ["G4",  "G4",  "G4",  "G4",   "G4"],
+      "beats":  [0.5, 0.5, 1, 1, 1]
+    },
+    {
+      "lyrics": ["and",   "a",   "moo",  "moo",  "there."],
+      "notes":  ["G4",   "G4",   "G4",  "G4",   "G4"],
+      "beats":  [0.5, 0.5, 1, 1, 1]
+    },
+    {
+      "lyrics": ["Here",   "a",   "moo,",  "there",  "a",   "moo,"],
+      "notes":  ["C4",   "C4",   "C4",  "C4",   "C4",  "C4"],
+      "beats":  [0.5, 0.5, 1, 0.5, 0.5, 1]
+    },
+    {
+      "lyrics": ["every-",   "where",   "a",   "moo",  "moo."],
+      "notes":  ["G4",     "F4",     "E4",   "D4",  "C4"],
+      "beats":  [1, 1, 0.5, 1, 1.5]
+    }
+  ]
+}
