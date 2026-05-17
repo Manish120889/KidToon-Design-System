@@ -1,0 +1,59 @@
+name: Daily Pipeline (v2)
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Mode: kidtoon | news'
+        required: true
+        default: 'kidtoon'
+      dryRun:
+        description: 'Dry run (no uploads)'
+        required: false
+        default: 'false'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Install deps
+        run: npm install
+      - name: Run pipeline
+        env:
+          PIPELINE_MODE: ${{ github.event.inputs.mode || 'kidtoon' }}
+          VIDEOS_PER_DAY: '1'
+          AUTO_APPROVE: ${{ vars.AUTO_APPROVE || '0' }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          SUNO_API_BASE: ${{ secrets.SUNO_API_BASE }}
+          SUNO_API_KEY: ${{ secrets.SUNO_API_KEY }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+          INSTAGRAM_PUBLIC_BASE_URL: ${{ secrets.INSTAGRAM_PUBLIC_BASE_URL }}
+        run: |
+          if [ "${{ github.event.inputs.dryRun }}" = "true" ]; then
+            npm run daily:dryrun
+          else
+            npm run daily:v2
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pipeline-output-${{ github.run_id }}
+          path: |
+            out/runs/**
+            state/**
+          retention-days: 14
